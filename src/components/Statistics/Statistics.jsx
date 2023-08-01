@@ -1,3 +1,4 @@
+import { getColor } from 'helpers/get-color';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StatList, StatItem, StatValue } from '../Statistics/Statistics.styled';
@@ -5,19 +6,19 @@ import { StatList, StatItem, StatValue } from '../Statistics/Statistics.styled';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <StatList>
-      <StatItem>
+      <StatItem color={getColor('good')}>
         Good: <StatValue>{good}</StatValue>
       </StatItem>
-      <StatItem>
+      <StatItem color={getColor('neutral')}>
         Neutral: <StatValue>{neutral}</StatValue>
       </StatItem>
-      <StatItem>
+      <StatItem color={getColor('bad')}>
         Bad: <StatValue>{bad}</StatValue>
       </StatItem>
-      <StatItem>
+      <StatItem color={getColor('total')}>
         Total: <StatValue>{total}</StatValue>
       </StatItem>
-      <StatItem>
+      <StatItem color={getColor('positivePercentage')}>
         PositivePercentage: <StatValue>{positivePercentage}%</StatValue>
       </StatItem>
     </StatList>
@@ -26,9 +27,9 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
 export default Statistics;
 
 Statistics.propTypes = {
-  good: PropTypes.string.isRequired,
-  neutral: PropTypes.string.isRequired,
-  bad: PropTypes.string.isRequired,
-  total: PropTypes.string.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
 };

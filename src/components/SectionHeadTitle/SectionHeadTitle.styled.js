@@ -1,8 +1,8 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// export const Text = styled.h1`
-// /* color: black;
-// font-weight:700;
-// font-size: 45px;
-// margin-bottom:40px; */
-// `
+export const Text = styled.h1`
+  color: #2f2d4e;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+`;
